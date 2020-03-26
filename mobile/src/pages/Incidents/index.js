@@ -20,9 +20,9 @@ export default function Incidents() {
     }
 
     async function loadInscidents() {
-        if (loading) {
+        /*if (loading) {
             return;
-        }
+        }*/
 
         if (total > 0 && incidents.length === total) {
             return;
@@ -35,10 +35,10 @@ export default function Incidents() {
                 page
             }
         });
-        setIncidents([...incident, ...response.data]);
+        setIncidents([...incidents, ...response.data]);
         setTotal(response.headers['x-total-count']);
         setPage(page + 1);
-        setLoading(false);
+        setLoading(false); 
     }
 
     useEffect(() => {
@@ -50,7 +50,7 @@ export default function Incidents() {
             <View style={styles.header}>
                 <Image source={logoImg}></Image>
                 <Text style={styles.headerText}>
-                    Total de <Text style={styles.headerTextBold}>{total} casos.</Text>
+                    Total de <Text style={styles.headerTextBold}>{ total} casos.</Text>
                 </Text>
             </View>
 
