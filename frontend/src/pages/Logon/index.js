@@ -6,7 +6,7 @@ import api from "../../services/api";
 import "./style.css";
 
 import heroesImg from "../../assets/heroes.png";
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logo.png";
 
 function Logon() {
   const [id, setId] = useState("");
